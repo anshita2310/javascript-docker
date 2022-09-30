@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: anshitajavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anshitajavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: anshitajavascriptdocker 
+    spec:
+      containers:
+        - name: anshitajavascriptdocker 
+          image: anshi.azurecr.io/anshitajavascriptdocker
+          ports:
+          - containerPort: 8080
